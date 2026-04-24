@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access.service';
 import { Authority } from 'app/shared/jhipster/constants';
+import { AboutComponent } from './about/about.component';
 
 import { errorRoute } from './layouts/error/error.route';
 
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./entities/entity.routes'),
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
   },
   ...errorRoute,
 ];
