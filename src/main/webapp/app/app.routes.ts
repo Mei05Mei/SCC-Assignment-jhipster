@@ -35,13 +35,14 @@ const routes: Routes = [
     title: 'login.title',
   },
   {
-    path: '',
-    loadChildren: () => import('./entities/entity.routes'),
-  },
-  {
     path: 'about',
     component: AboutComponent,
   },
+  {
+    path: '',
+    loadChildren: () => import('./entities/entity.routes'),
+  },
+
   ...errorRoute,
 ];
 
